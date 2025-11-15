@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asfalés</title>
+    <meta name="description" content="Asfalés - Concesionario de autos nuevos y usados. Encuentra el vehículo perfecto para ti.">
+    <title>Asfalés - Concesionario de Autos</title>
     <link rel="stylesheet" type="Text/css" href="estilo.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,91 +12,102 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header class="header-area">
+    <header class="header-area" role="banner">
         <div class="contenedor custom-contenedor">
             <nav class="navbar justify-content-between">
                 <div class="logo">
-                    <img src="imagen/Logo.png" alt="logo">
+                    <img src="imagen/Logo.png" alt="Asfalés - Logo del concesionario">
                 </div>
                 <div class="secciones-bar">
-                    <ul>
-                        <li><a href="#">Modelos</a></li>
-                        <li><a href="#">Tecnologías</a></li>
-                        <li><a href="#">Concesionarios</a></li>
-                        <li><a href="#">Repuestos</a></li>
-                        <li><a href="#">Contacto</a></li>
+                    <ul role="menubar">
+                        <li><a href="#modelos" role="menuitem">Modelos</a></li>
+                        <li><a href="#tecnologias" role="menuitem">Tecnologías</a></li>
+                        <li><a href="#concesionarios" role="menuitem">Concesionarios</a></li>
+                        <li><a href="#repuestos" role="menuitem">Repuestos</a></li>
+                        <li><a href="#contacto" role="menuitem">Contacto</a></li>
                     </ul>
                  </div>
                 <div class="item-bar">
                     <div class="item icono-bar">
-                        <a href="#"><i class="fa-regular fa-circle-user"></i></a>
+                        <a href="#" aria-label="Perfil de usuario"><i class="fa-regular fa-circle-user"></i></a>
                     </div>
                     <div class="item btn-bar">
-                            <a href="#">Cotización</a>
+                            <a href="#">Cotización <span class="contador-cotizaciones">0</span></a>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
 
-    <section class="banner">
-        <div class="contenedor">
-            <div class="fila">
-                <div class="texto-banner">
-                    <div class="banner-content">
-                        <span>Piensas comprar un carro?</span>
-                        <h1>Bienvenido al fascinante mundo de los carros<span class="span-azul-h1">.</span></h1>
-                    </div>
-                </div>
-                <div class="imagen-banner">
-                    <div class="right-content">
-                        <img class="imgbanner"src="imagen/banner.jpg" alt="">
-                    </div>
-                </div>
-                <div class="seccion-banner">
-                    <div class="banner-filter-form mt-40">
-                        <p>Estoy viendo un...</span>
-                        <div class="categoria">
-                            <ul>
-                                <li><button>Todos</button></li>
-                                <li><button>Carros nuevos</button></li>
-                                <li><button>carros usados</button></li>
-                            </ul>
+    <main>
+        <section class="banner" role="banner">
+            <div class="contenedor">
+                <div class="fila">
+                    <div class="texto-banner">
+                        <div class="banner-content">
+                            <span>Piensas comprar un carro?</span>
+                            <h1>Bienvenido al fascinante mundo de los carros<span class="span-azul-h1">.</span></h1>
                         </div>
-                        <div class="form p-30">
-                            <ul>
-                                <li>
-                                    <p>Location</p>
-                                    <span>Lima</span>
-                                </li>
-                                <li>
-                                    <p>Marca</p>
-                                    <span>Toyota</span>
-                                </li>
-                                <li>
-                                    <p>Modelo</p>
-                                    <span>Crossover</span>
-                                </li>
-                                <li>
-                                    <p>Color</p>
-                                    <span>Rojo</span>
-                                </li>
-                            </ul>
-                            <div class="icono-form">
-                                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    <div class="imagen-banner">
+                        <div class="right-content">
+                            <img class="imgbanner" src="imagen/banner.jpg" alt="Vehículo destacado en el banner principal">
+                        </div>
+                    </div>
+                    <div class="seccion-banner">
+                        <div class="banner-filter-form mt-40">
+                            <p>Estoy viendo un...</p>
+                            <div class="categoria">
+                                <ul>
+                                    <li><button>Todos</button></li>
+                                    <li><button>Carros nuevos</button></li>
+                                    <li><button>carros usados</button></li>
+                                </ul>
                             </div>
+                            <form class="form p-30" id="form-busqueda">
+                                <div class="form-fields">
+                                    <div class="field">
+                                        <label>Ubicación</label>
+                                        <select id="ubicacion">
+                                            <option value="">Seleccionar</option>
+                                            <option value="lima">Lima</option>
+                                            <option value="arequipa">Arequipa</option>
+                                            <option value="trujillo">Trujillo</option>
+                                        </select>
+                                    </div>
+                                    <div class="field">
+                                        <label>Marca</label>
+                                        <select id="marca">
+                                            <option value="">Todas las marcas</option>
+                                        </select>
+                                    </div>
+                                    <div class="field">
+                                        <label>Modelo</label>
+                                        <select id="modelo">
+                                            <option value="">Todos los modelos</option>
+                                        </select>
+                                    </div>
+                                    <div class="field">
+                                        <label>Precio</label>
+                                        <select id="precio">
+                                            <option value="">Cualquier precio</option>
+                                            <option value="0-200000">Hasta S/200,000</option>
+                                            <option value="200000-500000">S/200,000 - S/500,000</option>
+                                            <option value="500000-999999">Más de S/500,000</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="submit" class="icono-form" aria-label="Buscar vehículos">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
                         </div>
                     </div>
-
-
                 </div>
-
             </div>
-        </div>
+        </section>
 
-    </section>
-
-    <section class="catalogo pt-100 pb-70">
+        <section class="catalogo pt-100 pb-70" id="modelos">
             <div class="contenedor">
                 <div class="fila">
                     <div class="section-title mb-30 px-12">
@@ -110,10 +122,10 @@
                         </div>
                     </div>
                     <div class="section-col-panel">
-                        <div class="fila justify-content-between">
-                            <div class="panel mb-20 mx-12">
+                        <div class="fila justify-content-between" role="list">
+                            <article class="panel mb-20 mx-12" role="listitem">
                                 <div class="imagen-panel">
-                                    <img src="imagen/catalogo/catalogo-1.png" alt="">
+                                    <img src="imagen/catalogo/catalogo-1.png" alt="Aurora Starlight Elite - Vehículo tipo Coupé">
                                 </div>
                                 <div class="datos p-15">
                                     <ul>
@@ -123,10 +135,10 @@
                                         <li><p>S/250000.00</p></li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="panel mb-20 mx-12">
+                            </article>
+                            <article class="panel mb-20 mx-12" role="listitem">
                                 <div class="imagen-panel">
-                                    <img src="imagen/catalogo/catalogo-2.png" alt="">
+                                    <img src="imagen/catalogo/catalogo-2.png" alt="Eclipse Moonlight Sport - Vehículo tipo Crossover">
                                 </div>
                                 <div class="datos p-15">
                                     <ul>
@@ -136,10 +148,10 @@
                                         <li><p>S/310000.00</p></li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="panel mb-20 mx-12">
+                            </article>
+                            <article class="panel mb-20 mx-12" role="listitem">
                                 <div class="imagen-panel">
-                                    <img src="imagen/catalogo/catalogo-3.png" alt="">
+                                    <img src="imagen/catalogo/catalogo-3.png" alt="Zephyr Windchaser XE - Vehículo tipo Sedán">
                                 </div>
                                 <div class="datos p-15">
                                     <ul>
@@ -149,10 +161,10 @@
                                         <li><p>S/560000.00</p></li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="panel mb-20 mx-12">
+                            </article>
+                            <article class="panel mb-20 mx-12" role="listitem">
                                 <div class="imagen-panel">
-                                    <img src="imagen/catalogo/catalogo-4.jpg" alt="">
+                                    <img src="imagen/catalogo/catalogo-4.jpg" alt="Radiant Sunburst Deluxe - Vehículo tipo SUV">
                                 </div>
                                 <div class="datos p-15">
                                     <ul>
@@ -162,201 +174,146 @@
                                         <li><p>S/670000.00</p></li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="panel mb-20 mx-12">
+                            </article>
+                            <article class="panel mb-20 mx-12" role="listitem">
                                 <div class="imagen-panel">
-                                    <img src="imagen/catalogo/catalogo-5.jpg" alt="">
+                                    <img src="imagen/catalogo/catalogo-5.jpg" alt="Cosmic Thunder Pro - Vehículo tipo Hatchback">
                                 </div>
                                 <div class="datos p-15">
                                     <ul>
                                         <li><span>Hatchback</span></li>
-                                        <li><h4>Phoenix Firestorm GT</h4></li>
-                                        <li><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque illum eum soluta rerum provident eos?</p></li>
-                                        <li><p>S/610000.00</p></li>
+                                        <li><h4>Cosmic Thunder Pro</h4></li>
+                                        <li><p>Vehículo compacto ideal para la ciudad, con excelente rendimiento de combustible y tecnología avanzada.</p></li>
+                                        <li><p>S/180000.00</p></li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="panel mb-20 mx-12">
+                            </article>
+                            <article class="panel mb-20 mx-12" role="listitem">
                                 <div class="imagen-panel">
-                                    <img src="imagen/catalogo/catalogo-6.png" alt="">
+                                    <img src="imagen/catalogo/catalogo-6.png" alt="Stellar Velocity Max - Vehículo deportivo">
                                 </div>
                                 <div class="datos p-15">
                                     <ul>
-                                        <li><span>Sport</span></li>
-                                        <li><h4>Thunderstorm Turbo Pro</h4></li>
-                                        <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ullam quis exercitationem. Blanditiis, omnis natus?</p></li>
-                                        <li><p>S/390000.00</p></li>
+                                        <li><span>Deportivo</span></li>
+                                        <li><h4>Stellar Velocity Max</h4></li>
+                                        <li><p>Deportivo de alta gama con motor turbo y diseño aerodinámico para máximo rendimiento.</p></li>
+                                        <li><p>S/890000.00</p></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </article>
                         </div>
-                    </div>
-                    <div class="btn-mas mt-20 mb-30">
-                        <a class="btn-catalogo-mas" href="#">Ver más</a>
+                        <div class="btn-mas">
+                            <a href="#" class="btn-catalogo-mas">Ver más vehículos</a>
+                        </div>
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
 
-    </section id="seccion3" class="espaciado">
-    <div class="cont-sec3">
-            <p class="texto-seccion3">
-                Un solo paso <br>
-                para vivir una gran aventura
-            </p>
-            <div class="fila-seccion3">
-                <div class="columna-se">
-                    <img src="imagen/seccion-3/velo.png">
-                    <h4 class="h4-color">Potencia y Estilo en Cada Giro</h4>
-                    <p class="p-color">Descubre la velocidad con elegancia en nuestra exclusiva selección de autos.</p>
-                </div>
-                <div class="columna-se">
-                    <img src="imagen/seccion-3/depor.png">
-                    <h4 class="h4-color">Diseños Deportivos, Velocidad Sin Límites</h4>
-                    <p class="p-color">Potencia, estilo y velocidad en cada línea. Explora nuestros autos con diseños deportivos.</p>
-                </div>
-                <div class="columna-se">
-                    <img src="imagen/seccion-3/llanta.png">
-                    <h4 class="h4-color">Calidad en Cada Kilómetro</h4>
-                    <p class="p-color">Perfección en cada viaje. Velocidad excepcional, calidad merecida.</p>
-                </div>
-                <div class="columna-se">
-                    <img src="imagen/seccion-3/precio.png">
-                    <h4 class="h4-color">Alta Velocidad, Bajos Precios</h4>
-                    <p class="p-color">Descubre la potencia a precios que te sorprenderán.</p>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    <section>
-        
-    <section class="blog pb-70">
-        <div class="contenedor">
-            <div class="fila">
-                <div class="section-title mb-30 px-12">
-                    <div class="texto-title mb-20">
-                        <span>Nuestro blog</span>
-                        <h2>Lee nuestro reciente post<span class="span-azul-h2">.</span></h2>
+        <section id="seccion3" class="espaciado">
+            <div class="cont-sec3">
+                <div class="fila-seccion3">
+                    <div class="columna-se">
+                        <h2 class="texto-seccion3">¿Por qué elegirnos?</h2>
                     </div>
-                    <a class="btn-blog mb-20" href="#">View More</a>
                 </div>
-                <div class="section-col px-12">
-                    <div class="fila justify-content-between">
-                        <div class="columna">
-                            <img src="imagen/blog/blog-1.jpg" alt="">
-                            <div class="contenido-columna p-20">
-                                <h3>Los Avances Tecnológicos que Revolucionarán la Industria de Automóviles en 2023</h3>
-                                <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam provident delectus cupiditate tempore odio quia tempora assumenda, laborum ab libero.</P>
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
-                        <div class="columna">
-                            <img src="imagen/blog/blog-2.jpg" alt="">
-                            <div class="contenido-columna p-20">
-                                <h3>Los Coches Eléctricos del Futuro: Innovación y Sostenibilidad en la Carretera</h3>
-                                <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam provident delectus cupiditate tempore odio quia tempora assumenda, laborum ab libero.</P>
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
-                        <div class="columna">
-                            <img src="imagen/blog/blog-3.jpg" alt="">
-                            <div class="contenido-columna p-20">
-                                <h3>Conducción Autónoma: El Futuro de la Movilidad en Carretera</h3>
-                                <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam provident delectus cupiditate tempore odio quia tempora assumenda, laborum ab libero. Totam provident delectus cupiditate tempore odio quia tempora assumenda, laborum ab libero.</P>
-                                <a href="#">Read More</a>
-                            </div>
-                        </div>
+                <div class="fila-seccion3">
+                    <div class="columna-se">
+                        <img src="imagen/seccion-3/precio.png" alt="Mejores precios">
+                        <h4 class="h4-color">Mejores Precios</h4>
+                        <p class="p-color">Ofrecemos los precios más competitivos del mercado con financiamiento flexible.</p>
+                    </div>
+                    <div class="columna-se">
+                        <img src="imagen/seccion-3/velo.png" alt="Entrega rápida">
+                        <h4 class="h4-color">Entrega Rápida</h4>
+                        <p class="p-color">Proceso de compra ágil y entrega inmediata de tu vehículo nuevo.</p>
+                    </div>
+                    <div class="columna-se">
+                        <img src="imagen/seccion-3/llanta.png" alt="Calidad garantizada">
+                        <h4 class="h4-color">Calidad Garantizada</h4>
+                        <p class="p-color">Todos nuestros vehículos pasan por rigurosas inspecciones de calidad.</p>
+                    </div>
+                    <div class="columna-se">
+                        <img src="imagen/seccion-3/depor.png" alt="Servicio premium">
+                        <h4 class="h4-color">Servicio Premium</h4>
+                        <p class="p-color">Atención personalizada y servicio post-venta de primera clase.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="footer-area">
-        <div class="contenedor">
-            <div class="footer-top px-12 pt-100 pb-70">
+    <footer class="footer-area" role="contentinfo">
+        <div class="footer-top ptb-60">
+            <div class="contenedor">
                 <div class="fila">
                     <div class="caja">
-                        <h3>Links de ayuda</h3>
+                        <h3>Asfalés</h3>
+                        <p>Tu concesionario de confianza con más de 20 años de experiencia en el mercado automotriz.</p>
+                        <div class="especial">
+                            <ul>
+                                <li><i class="fa-solid fa-location-dot"></i><p>Av. Principal 123, Lima, Perú</p></li>
+                                <li><i class="fa-solid fa-phone"></i><p>+51 1 234-5678</p></li>
+                                <li><i class="fa-solid fa-envelope"></i><p>info@asfales.com</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="caja">
+                        <h3>Enlaces Rápidos</h3>
                         <ul>
-                            <li><a href="#">Glosario técnico</a></li>
-                            <li><a href="#">Atención al cliente</a></li>
-                            <li><a href="#">Preguntas frecuentes</a></li>
-                            <li>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                            </li>
+                            <li><a href="#modelos">Modelos</a></li>
+                            <li><a href="#tecnologias">Tecnologías</a></li>
+                            <li><a href="#concesionarios">Concesionarios</a></li>
+                            <li><a href="#repuestos">Repuestos</a></li>
                         </ul>
                     </div>
                     <div class="caja">
-                        <h3>Tipos de Vehiculos</h3>
+                        <h3>Servicios</h3>
                         <ul>
-                            <li><a href="#">SUVs</a></li>
-                            <li><a href="#">Crossovers</a></li>
-                            <li><a href="#">Híbridos</a></li>
-                            <li><a href="#">Híbridos SUVs</a></li>
-                            <li><a href="#">Series NIGHT</a></li>
+                            <li><a href="#">Financiamiento</a></li>
+                            <li><a href="#">Seguros</a></li>
+                            <li><a href="#">Mantenimiento</a></li>
+                            <li><a href="#">Garantía</a></li>
                         </ul>
                     </div>
                     <div class="caja">
-                        <h3>Sobre Nosotros</h3>
+                        <h3>Síguenos</h3>
                         <ul>
-                            <li><a href="#">Historia</a></li>
-                            <li><a href="#">Misión</a></li>
-                            <li><a href="#">Visión</a></li>
-                            <li><a href="#">Filosofía</a></li>
-                            <li><a href="#">Valores</a></li>
-                        </ul>
-                    </div>
-                    <div class="caja especial">
-                        <h3>Contáctanos</h3>
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-location-dot"></i>
-                                <p>Av. Benavides 778 - Miraflores</p>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-phone"></i>
-                                <a href="#">999 888 777</a>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-envelope"></i>
-                                <a href="#">info@example.com</a>
-                            </li>
+                            <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="copyright px-12">
-                <div class="contenedor">
-                    <div class="parte1">
-                        <div class="logo-copyright">
-                            <img src="imagen/logo proyecto.png" alt="">
-                            <p>Evaluación Permanente 2</p>
-                        </div>
-                        <div class="link-help">
-                            <li><a href="#">Contáctanos</a></li>
-                            <li><a href="#">FAQs</a></li>
-                        </div>
+        </div>
+        <div class="copyright">
+            <div class="contenedor">
+                <div class="parte1">
+                    <div class="logo">
+                        <img src="imagen/logo.png" alt="Asfalés Logo">
+                        <p>© 2024 Asfalés. Todos los derechos reservados.</p>
                     </div>
-                    <div class="parte2">
-                        <div class="derechos">
-                            <p class="derecho">&copy;2023 Asfalés, Derechos reservados</p>
-                        </div>
-                        <div class="seccion-final">
-                            <ul class="seccionlast">
-                                <li><a href="#">Privacy Notice</a></li>
-                                <li><a href="#">Legal Terms</a></li>
-                                <li><a href="#">Site Map</a></li>
-                            </ul>
-                        </div>
+                    <div class="link-help">
+                        <ul class="seccionlast">
+                            <li><a href="#">Términos y Condiciones</a></li>
+                            <li><a href="#">Política de Privacidad</a></li>
+                            <li><a href="#">Ayuda</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    
+
+    <!-- Modal de vehículo -->
+    <div id="modalVehiculo" class="modal">
+        <div class="modal-contenido">
+            <!-- Contenido dinámico -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalles del vehículo - Asfalés">
+    <title>Detalle del Vehículo - Asfalés</title>
+    <link rel="stylesheet" type="Text/css" href="estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header-area" role="banner">
+        <div class="contenedor custom-contenedor">
+            <nav class="navbar justify-content-between">
+                <div class="logo">
+                    <a href="index.html"><img src="imagen/Logo.png" alt="Asfalés - Logo del concesionario"></a>
+                </div>
+                <div class="secciones-bar">
+                    <ul role="menubar">
+                        <li><a href="index.html#modelos" role="menuitem">Modelos</a></li>
+                        <li><a href="index.html#tecnologias" role="menuitem">Tecnologías</a></li>
+                        <li><a href="index.html#concesionarios" role="menuitem">Concesionarios</a></li>
+                        <li><a href="index.html#repuestos" role="menuitem">Repuestos</a></li>
+                        <li><a href="index.html#contacto" role="menuitem">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="item-bar">
+                    <div class="item icono-bar">
+                        <a href="#" aria-label="Perfil de usuario"><i class="fa-regular fa-circle-user"></i></a>
+                    </div>
+                    <div class="item btn-bar">
+                        <a href="#">Cotización <span class="contador-cotizaciones">0</span></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="detalle-vehiculo pt-100">
+        <div class="contenedor">
+            <nav class="breadcrumb mb-30">
+                <a href="index.html">Inicio</a> > <a href="index.html#modelos">Vehículos</a> > <span id="breadcrumb-nombre">Detalle</span>
+            </nav>
+
+            <div class="detalle-contenido">
+                <div class="detalle-imagenes">
+                    <div class="imagen-principal">
+                        <img id="imagen-principal" src="" alt="">
+                    </div>
+                </div>
+
+                <div class="detalle-info">
+                    <div class="vehiculo-header">
+                        <span id="vehiculo-tipo" class="tipo-badge"></span>
+                        <h1 id="vehiculo-nombre"></h1>
+                        <div id="vehiculo-precio" class="precio-principal"></div>
+                    </div>
+
+                    <div class="vehiculo-descripcion">
+                        <p id="vehiculo-descripcion"></p>
+                    </div>
+
+                    <div class="especificaciones-detalle">
+                        <h3>Especificaciones Técnicas</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <i class="fa-solid fa-engine"></i>
+                                <div>
+                                    <strong>Motor</strong>
+                                    <span id="spec-motor"></span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fa-solid fa-gas-pump"></i>
+                                <div>
+                                    <strong>Combustible</strong>
+                                    <span id="spec-combustible"></span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fa-solid fa-gears"></i>
+                                <div>
+                                    <strong>Transmisión</strong>
+                                    <span id="spec-transmision"></span>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fa-solid fa-calendar"></i>
+                                <div>
+                                    <strong>Año</strong>
+                                    <span id="spec-año"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="acciones-vehiculo">
+                        <button id="btn-cotizar-detalle" class="btn-principal">
+                            <i class="fa-solid fa-calculator"></i> Cotizar Ahora
+                        </button>
+                        <button id="btn-contactar" class="btn-secundario">
+                            <i class="fa-solid fa-phone"></i> Contactar por WhasApp
+                        </button>
+                        <button id="btn-favorito" class="btn-favorito">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de Contacto -->
+            <section id="contacto" class="formulario-contacto pt-100">
+                <div class="contenedor">
+                    <div class="section-title mb-30">
+                        <h2>Contacta con Nosotros<span class="span-azul-h2">.</span></h2>
+                        <p>¿Interesado en este vehículo? Completa el formulario y te contactaremos.</p>
+                    </div>
+                    
+                    <div class="contacto-contenido">
+                        <div class="formulario-wrapper">
+                            <form id="formulario-contacto" class="form-contacto">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre Completo *</label>
+                                    <input type="text" id="nombre" name="nombre" required>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telefono">Teléfono *</label>
+                                        <input type="tel" id="telefono" name="telefono" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="interes">Tipo de Interés</label>
+                                    <select id="interes" name="interes">
+                                        <option value="compra">Compra</option>
+                                        <option value="financiamiento">Financiamiento</option>
+                                        <option value="intercambio">Intercambio</option>
+                                        <option value="informacion">Más Información</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="mensaje">Mensaje</label>
+                                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos más sobre tu interés..."></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn-enviar">
+                                    <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <div class="info-contacto">
+                            <div class="contacto-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <h4>Ubicación</h4>
+                                    <p>Av. Principal 123<br>Lima, Perú</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contacto-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <h4>Teléfono</h4>
+                                    <p>+51 1 234-5678</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contacto-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>ventas@asfales.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contacto-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <div>
+                                    <h4>Horarios</h4>
+                                    <p>Lun - Vie: 9:00 - 18:00<br>Sáb: 9:00 - 14:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-area" role="contentinfo">
+        <div class="footer-top ptb-60">
+            <div class="contenedor">
+                <div class="fila">
+                    <div class="caja">
+                        <h3>Asfalés</h3>
+                        <p>Tu concesionario de confianza con más de 20 años de experiencia en el mercado automotriz.</p>
+                    </div>
+                    <div class="caja">
+                        <h3>Enlaces Rápidos</h3>
+                        <ul>
+                            <li><a href="index.html#modelos">Modelos</a></li>
+                            <li><a href="index.html#tecnologias">Tecnologías</a></li>
+                            <li><a href="index.html#concesionarios">Concesionarios</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="contenedor">
+                <div class="parte1">
+                    <div class="logo">
+                        <img src="imagen/logo.png" alt="Asfalés Logo">
+                        <p>© 2024 Asfalés. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="detalle.js"></script>
+</body>
+</html>
